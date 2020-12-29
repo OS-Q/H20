@@ -1,25 +1,18 @@
 {
-    "name": "H20",
-    "title": "H20",
-    "description": "Logic Green LGT8Fx",
-    "url": "http://www.lgtic.com/",
-    "homepage": "https://www.OS-Q.com/H20",
+    "name": "P12",
+    "title": "Logic Green boards",
+    "description": "Board Package for Logic Green",
+    "url": "https://github.com/darkautism/pio-lgt8fx",
+    "homepage": "https://github.com/darkautism/pio-lgt8fx",
     "license": "Apache-2.0",
     "engines": {
         "platformio": "^5"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/OS-Q/H20.git"
+        "url": "https://github.com/darkautism/pio-lgt8fx.git"
     },
     "version": "1.0.1",
-    "packageRepositories": [
-        "http://182.61.61.133/link/toolchain/manifest.json",
-        "http://182.61.61.133/link/toolchain/openocd.json",
-        "http://182.61.61.133/link/framework/manifest.json",
-        "http://182.61.61.133/link/platformio.json",
-        "http://182.61.61.133/link/platform.json"
-    ],
     "frameworks": {
         "arduino": {
             "package": "framework-lgt8fx",

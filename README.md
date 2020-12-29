@@ -1,6 +1,8 @@
-# [Platform H20](https://github.com/OS-Q/H20)
+# [Platform P12](https://github.com/OS-Q/P12)
 
 [![sites](http://182.61.61.133/link/resources/OSQ.png)](http://www.OS-Q.com)
-### [工程描述](https://github.com/OS-Q/H20/wiki)
+### [简介](https://github.com/OS-Q/P12/wiki)
 
-### [OS-Q = [Open Source & Operating System] ](http://www.OS-Q.com)
+[P12](https://github.com/OS-Q/P12) 基于[PlatformIO](https://github.com/platformio/platformio-core) 框架
+
+### [Q = (OpenSource & OperatingSystem) ](http://www.OS-Q.com)
