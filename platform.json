@@ -2,7 +2,6 @@
     "name": "P12",
     "title": "Platform P12",
     "description": "Board Package for Logic Green",
-    "url": "https://github.com/darkautism/pio-lgt8fx",
     "homepage": "http://www.OS-Q.com/P12",
     "license": "Apache-2.0",
     "keywords": [
@@ -38,7 +37,7 @@
             "type": "toolchain",
             "version": ">=1.70300.191015"
         },
-        "framework-lgt8fx": {
+        "framework-A04": {
             "type": "framework",
             "optional": true,
             "owner": "OS-Q",
