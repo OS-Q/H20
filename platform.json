@@ -1,18 +1,24 @@
 {
     "name": "P12",
-    "title": "Logic Green boards",
+    "title": "Platform P12",
     "description": "Board Package for Logic Green",
     "url": "https://github.com/darkautism/pio-lgt8fx",
-    "homepage": "https://github.com/darkautism/pio-lgt8fx",
+    "homepage": "http://www.OS-Q.com/P12",
     "license": "Apache-2.0",
     "engines": {
         "platformio": "^5"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/darkautism/pio-lgt8fx.git"
+        "url": "https://github.com/OS-Q/P12.git"
     },
     "version": "1.0.1",
+    "packageRepositories": [
+        "http://182.61.61.133/link/toolchain/manifest.json",
+        "http://182.61.61.133/link/toolchain/openocd.json",
+        "http://182.61.61.133/link/framework/manifest.json",
+        "http://182.61.61.133/link/platformio.json"
+    ],
     "frameworks": {
         "arduino": {
             "package": "framework-lgt8fx",
