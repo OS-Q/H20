@@ -5,6 +5,14 @@
     "url": "https://github.com/darkautism/pio-lgt8fx",
     "homepage": "http://www.OS-Q.com/P12",
     "license": "Apache-2.0",
+    "keywords": [
+        "OS-Q",
+        "dev-platform",
+        "avr",
+        "lgt8fx",
+        "MCU",
+        "8-bit"
+    ],
     "engines": {
         "platformio": "^5"
     },
@@ -12,7 +20,7 @@
         "type": "git",
         "url": "https://github.com/OS-Q/P12.git"
     },
-    "version": "1.0.1",
+    "version": "1.0.2",
     "packageRepositories": [
         "http://182.61.61.133/link/toolchain/manifest.json",
         "http://182.61.61.133/link/toolchain/openocd.json",
@@ -21,7 +29,7 @@
     ],
     "frameworks": {
         "arduino": {
-            "package": "framework-lgt8fx",
+            "package": "framework-A04",
             "script": "builder/frameworks/arduino.py"
         }
     },
@@ -33,7 +41,8 @@
         "framework-lgt8fx": {
             "type": "framework",
             "optional": true,
-            "version": ">=1.0.5"
+            "owner": "OS-Q",
+            "version": "https://github.com/OS-Q/A04.git"
         },
         "tool-avrdude": {
             "type": "uploader",
