@@ -5,7 +5,7 @@
     "clock_source": "1",
     "core": "lgt8f",
     "mcu": "atmega328p",
-    "variant": "lgt8fx8p-wemos-TTGO-XI"
+    "variant": "lgt8fx8p"
   },
   "bootloader": {
     "efuse": "0xFD",
@@ -18,7 +18,7 @@
   "frameworks": [
     "arduino"
   ],
-  "name": "LGT8F328P-wemos-TTGO-XI",
+  "name": "LGT8F328P",
   "upload": {
     "maximum_ram_size": 2048,
     "maximum_size": 29696,
