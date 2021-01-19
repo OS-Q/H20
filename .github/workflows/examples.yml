@@ -10,7 +10,11 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.8]
         example:
-          - "examples/Blink"
+          - "examples/arduino-blink"
+          - "examples/arduino-external-libs"
+          - "examples/arduino-internal-libs"
+          - "examples/arduino-own-src_dir"
+          - "examples/owner-board"
           - "examples/MPU_Speed_Setting"
     runs-on: ${{ matrix.os }}
     steps:
