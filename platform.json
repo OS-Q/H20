@@ -1,8 +1,8 @@
 {
-    "name": "P12",
-    "title": "Platform P12",
+    "name": "P08",
+    "title": "Platform P08",
     "description": "Board Package for Logic Green",
-    "homepage": "http://www.OS-Q.com/P12",
+    "homepage": "http://www.OS-Q.com/P08",
     "license": "Apache-2.0",
     "keywords": [
         "OS-Q",
@@ -15,11 +15,11 @@
     "engines": {
         "platformio": "^5"
     },
+    "version": "1.0.3",
     "repository": {
         "type": "git",
-        "url": "https://github.com/OS-Q/P12.git"
+        "url": "https://github.com/OS-Q/P08.git"
     },
-    "version": "1.0.2",
     "packageRepositories": [
         "http://182.61.61.133/link/toolchain/manifest.json",
         "http://182.61.61.133/link/toolchain/openocd.json",
@@ -35,7 +35,8 @@
     "packages": {
         "toolchain-atmelavr": {
             "type": "toolchain",
-            "version": ">=1.70300.191015"
+            "owner": "platformio",
+            "version": "~1.50400.0"
         },
         "framework-A04": {
             "type": "framework",
@@ -46,6 +47,7 @@
         "tool-avrdude": {
             "type": "uploader",
             "optional": true,
+            "owner": "platformio",
             "version": "~1.60300.0"
         }
     }

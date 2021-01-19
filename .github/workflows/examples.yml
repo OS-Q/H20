@@ -1,4 +1,4 @@
-name: P12
+name: P08
 
 on: [push, pull_request]
 
@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.7]
+        python-version: [3.8]
         example:
           - "examples/Blink"
           - "examples/MPU_Speed_Setting"
