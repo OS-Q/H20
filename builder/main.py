@@ -183,8 +183,8 @@ else:
         UPLOADERFLAGS=[
             "-p", "$BOARD_MCU",
             "-C",
-            join(env.PioPlatform().get_package_dir("tool-avrdude") or "",
-                 "avrdude.conf"),
+            join(env.PioPlatform().get_package_dir("u-avrdude") or "",
+                "avrdude.conf"),
             "-c", "$UPLOAD_PROTOCOL"
         ],
         UPLOADCMD='$UPLOADER $UPLOADERFLAGS -U flash:w:$SOURCES:i',

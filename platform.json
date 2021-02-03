@@ -4,7 +4,7 @@
     "description": "Logic Green AVR MCU",
     "homepage": "http://www.OS-Q.com/P12",
     "license": "Apache-2.0",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "keywords": [
         "OS-Q",
         "dev-platform",
@@ -54,9 +54,8 @@
             "owner": "OS-Q",
             "version": "https://github.com/OS-Q/N12.git"
         },
-        "tool-avrdude": {
+        "u-avrdude": {
             "type": "uploader",
-            "optional": true,
             "version": "~1.60300.0"
         }
     }
