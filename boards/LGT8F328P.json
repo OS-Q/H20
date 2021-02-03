@@ -11,7 +11,8 @@
     "file": "lgt8fx8p/optiboot_lgt8f328p.hex"
   },
   "frameworks": [
-    "arduino"
+    "arduino",
+    "native"
   ],
   "name": "LGT8F328P",
   "upload": {

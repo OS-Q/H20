@@ -11,7 +11,8 @@
     "file": "lgt8fx8ps20/optiboot_lgt8f328ps20.hex"
   },
   "frameworks": [
-    "arduino"
+    "arduino",
+    "native"
   ],
   "name": "LGT8F328P-SSOP20",
   "upload": {

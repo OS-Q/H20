@@ -16,7 +16,8 @@
     "unlock_bits": "0x3F"
   },
   "frameworks": [
-    "arduino"
+    "arduino",
+    "native"
   ],
   "name": "LGT8F328P-wemos-TTGO-XI",
   "upload": {
