@@ -1,4 +1,4 @@
-# [Platform P12](https://github.com/OS-Q/P12)
+# [P12](https://github.com/OS-Q/P12)
 
 [![Build Status](https://github.com/OS-Q/P12/workflows/P12/badge.svg)](https://github.com/OS-Q/P12/actions)
 
@@ -6,7 +6,7 @@
 
 [P12](https://github.com/OS-Q/P12) 适用于 [LGT8F](http://www.lgtic.com/lgt8fx8p/) 系列FLASH微控制器
 
-#### 关联资源
+#### 关联资源仓库
 
 * [A12](https://github.com/OS-Q/A12)
 * [N12](https://github.com/OS-Q/N12)
