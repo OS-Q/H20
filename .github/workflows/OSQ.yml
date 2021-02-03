@@ -1,4 +1,4 @@
-name: P08
+name: P12
 
 on: [push, pull_request]
 
@@ -8,14 +8,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.8]
+        python-version: [3.7]
         example:
           - "examples/arduino-blink"
           - "examples/arduino-external-libs"
           - "examples/arduino-internal-libs"
           - "examples/arduino-own-src_dir"
-          - "examples/owner-board"
           - "examples/MPU_Speed_Setting"
+
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2

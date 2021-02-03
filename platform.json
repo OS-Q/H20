@@ -1,24 +1,25 @@
 {
-    "name": "P08",
-    "title": "Platform P08",
-    "description": "Board Package for Logic Green",
-    "homepage": "http://www.OS-Q.com/P08",
+    "name": "P12",
+    "title": "Platform P12",
+    "description": "Logic Green AVR MCU",
+    "homepage": "http://www.OS-Q.com/P12",
     "license": "Apache-2.0",
+    "version": "1.0.4",
     "keywords": [
         "OS-Q",
         "dev-platform",
         "avr",
         "lgt8fx",
         "MCU",
+        "arduino",
         "8-bit"
     ],
     "engines": {
         "platformio": "^5"
     },
-    "version": "1.0.3",
     "repository": {
         "type": "git",
-        "url": "https://github.com/OS-Q/P08.git"
+        "url": "https://github.com/OS-Q/P12.git"
     },
     "packageRepositories": [
         "http://182.61.61.133/link/toolchain/manifest.json",
@@ -28,7 +29,7 @@
     ],
     "frameworks": {
         "arduino": {
-            "package": "framework-A04",
+            "package": "A12",
             "script": "builder/frameworks/arduino.py"
         }
     },
@@ -38,11 +39,11 @@
             "owner": "platformio",
             "version": "~1.50400.0"
         },
-        "framework-A04": {
+        "A12": {
             "type": "framework",
             "optional": true,
             "owner": "OS-Q",
-            "version": "https://github.com/OS-Q/A04.git"
+            "version": "https://github.com/OS-Q/A12.git"
         },
         "tool-avrdude": {
             "type": "uploader",
