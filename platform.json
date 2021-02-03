@@ -23,8 +23,9 @@
     },
     "packageRepositories": [
         "http://182.61.61.133/link/toolchain/manifest.json",
-        "http://182.61.61.133/link/toolchain/openocd.json",
         "http://182.61.61.133/link/framework/manifest.json",
+        "http://182.61.61.133/link/toolchain/openocd.json",
+        "http://dl.platformio.org/packages/manifest.json",
         "http://182.61.61.133/link/platformio.json"
     ],
     "frameworks": {
@@ -36,8 +37,7 @@
     "packages": {
         "toolchain-atmelavr": {
             "type": "toolchain",
-            "owner": "platformio",
-            "version": "~1.50400.0"
+            "version": "~1.70300.191015"
         },
         "A12": {
             "type": "framework",
@@ -48,7 +48,6 @@
         "tool-avrdude": {
             "type": "uploader",
             "optional": true,
-            "owner": "platformio",
             "version": "~1.60300.0"
         }
     }
