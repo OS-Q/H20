@@ -4,6 +4,6 @@
 
 ### [简介](https://github.com/OS-Q/P12/wiki)
 
-[P12](https://github.com/OS-Q/P12) 适用于 [LGT8F328P](https://github.com/SoCXin/LGT8F328P)
+[P12](https://github.com/OS-Q/P12) 适用于 [LGT8F](http://www.lgtic.com/lgt8fx8p/) 系列FLASH微控制器
 
 ### [Q = (OpenSource & OperatingSystem) ](http://www.OS-Q.com)
