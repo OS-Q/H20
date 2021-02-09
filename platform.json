@@ -38,23 +38,29 @@
         }
     },
     "packages": {
-        "toolchain-atmelavr": {
-            "type": "toolchain",
-            "version": "~1.70300.0"
-        },
         "A12": {
             "type": "framework",
             "optional": true,
             "owner": "OS-Q",
+            "description": "Arduino core for LGT8F mcu",
+            "homepage": "http://docs.OS-Q.com",
+            "title": "LGT8F Arduino",
             "version": "https://github.com/OS-Q/A12.git"
         },
         "N12": {
             "type": "framework",
             "optional": true,
             "owner": "OS-Q",
+            "description": "The SDK provides a set of application programming interfaces (APIs) for LGT8F mcu",
+            "homepage": "http://docs.OS-Q.com",
+            "title": "LGT8F SDK",
             "version": "https://github.com/OS-Q/N12.git"
         },
-        "u-avrdude": {
+        "toolchain-atmelavr": {
+            "type": "toolchain",
+            "version": "~1.70300.0"
+        },
+        "tool-avrdude": {
             "type": "uploader",
             "version": "~1.60300.0"
         }
