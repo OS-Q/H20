@@ -1,10 +1,13 @@
 {
     "name": "P12",
-    "title": "Platform P12",
-    "description": "Logic Green AVR MCU",
+    "title": "Platform P12 for LGT8F",
+    "description": "Logic Green AVR MCU LGT8F series",
     "homepage": "http://www.OS-Q.com/P12",
     "license": "Apache-2.0",
     "version": "1.0.5",
+    "engines": {
+        "platformio": "^5"
+    },
     "keywords": [
         "OS-Q",
         "dev-platform",
@@ -14,9 +17,6 @@
         "arduino",
         "8-bit"
     ],
-    "engines": {
-        "platformio": "^5"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/OS-Q/P12.git"

@@ -183,7 +183,7 @@ else:
         UPLOADERFLAGS=[
             "-p", "$BOARD_MCU",
             "-C",
-            join(env.PioPlatform().get_package_dir("u-avrdude") or "",
+            join(env.PioPlatform().get_package_dir("tool-avrdude") or "",
                 "avrdude.conf"),
             "-c", "$UPLOAD_PROTOCOL"
         ],
