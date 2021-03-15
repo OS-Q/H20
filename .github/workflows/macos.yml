@@ -21,8 +21,6 @@ jobs:
         python-version: [3.7]
         examples:
           - "examples/arduino-blink"
-          - "examples/arduino-external-libs"
-          - "examples/arduino-internal-libs"
           - "examples/arduino-own-src_dir"
           - "examples/MPU_Speed_Setting"
 
