@@ -1,6 +1,6 @@
 {
     "name": "P12",
-    "title": "Platform P12 for LGT8F",
+    "title": "Platform P12 (LGT8F)",
     "description": "Logic Green AVR MCU LGT8F series",
     "homepage": "http://www.OS-Q.com/P12",
     "license": "Apache-2.0",
@@ -21,19 +21,13 @@
         "type": "git",
         "url": "https://github.com/OS-Q/P12.git"
     },
-    "packageRepositories": [
-        "http://182.61.61.133/link/toolchain/manifest.json",
-        "http://182.61.61.133/link/framework/manifest.json",
-        "http://182.61.61.133/link/toolchain/openocd.json",
-        "http://182.61.61.133/link/platformio.json"
-    ],
     "frameworks": {
         "arduino": {
             "package": "A12",
             "script": "builder/frameworks/arduino.py"
         },
         "native": {
-            "package": "N12",
+            "package": "E12A",
             "script": "builder/frameworks/native.py"
         }
     },
@@ -42,19 +36,13 @@
             "type": "framework",
             "optional": true,
             "owner": "OS-Q",
-            "description": "Arduino core for LGT8F mcu",
-            "homepage": "http://docs.OS-Q.com",
-            "title": "LGT8F Arduino",
             "version": "https://github.com/OS-Q/A12.git"
         },
-        "N12": {
+        "E12A": {
             "type": "framework",
             "optional": true,
             "owner": "OS-Q",
-            "description": "The SDK provides a set of application programming interfaces (APIs) for LGT8F mcu",
-            "homepage": "http://docs.OS-Q.com",
-            "title": "LGT8F SDK",
-            "version": "https://github.com/OS-Q/N12.git"
+            "version": "https://github.com/OS-Q/E12A.git"
         },
         "toolchain-atmelavr": {
             "type": "toolchain",
