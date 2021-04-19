@@ -107,6 +107,13 @@ jobs:
           ossutil cp ${{ env.FIRMWARE }}/P12.zip ${{ secrets.OSS_P_BUCKET }} -rf
           echo "::set-output name=status::success"
 
+      - name: Delet tag
+        id: deletv
+        run: |
+          git fetch
+          git tag -d ${GITHUB_REF/refs\/tags\//}
+          git push origin :refs/tags/${GITHUB_REF/refs\/tags\//}
+
 
   rebuild:
     needs:
@@ -117,7 +124,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: "recursive"
-          fetch-depth: 1
 
       - name: Python ${{ matrix.python }}
         uses: actions/setup-python@v1
@@ -131,6 +137,15 @@ jobs:
           pip install -U https://github.com/OS-Q/S03/releases/latest/download/S03.zip
           pio platform install https://github.com/OS-Q/P12/releases/latest/download/P12.zip
           echo "::set-output name=status::success"
+
+      - name: Delet tag
+        id: delet
+        if: failure()
+        run: |
+          echo "::set-output name=delet_tag::release_p12_$(date +"%Y.%m.%d")_${GITHUB_REF/refs\/tags\//}"
+          git fetch
+          git tag -d release_p12_$(date +"%Y.%m.%d")_${GITHUB_REF/refs\/tags\//}
+          git push origin :refs/tags/release_p12_$(date +"%Y.%m.%d")_${GITHUB_REF/refs\/tags\//}
 
       - name: ReBuild
         id: rebuild
@@ -168,3 +183,39 @@ jobs:
           password: ${{secrets.MQTT_PASSWORD}}
           topic: ${{github.repository}}/${{github.workflow}}
           message: ${{steps.rebuild.outputs.status}}
+
+  build_fail:
+    needs:
+      - build
+    if: failure() && startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: "recursive"
+
+      - name: Delet tag
+        id: delet
+        run: |
+          git fetch
+          git tag -d ${GITHUB_REF/refs\/tags\//}
+          git push origin :refs/tags/${GITHUB_REF/refs\/tags\//}
+
+  release_fail:
+    needs:
+      - release
+    if: failure() && startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: "recursive"
+
+      - name: Delet tag
+        id: delet
+        run: |
+          git fetch
+          git tag -d ${GITHUB_REF/refs\/tags\//}
+          git push origin :refs/tags/${GITHUB_REF/refs\/tags\//}
