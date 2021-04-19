@@ -67,11 +67,11 @@ jobs:
           echo "Platform P12 for LGT8F MCU" >> README.txt
           echo $(date +"%Y.%m.%d") >> README.txt
           echo ${GITHUB_REF/refs\/tags\//} >> README.txt
-          ls -l ${{ env.FIRMWARE }}/P12.zip >> README.txt
-          sha256sum  ${{ env.FIRMWARE }}/P12.zip >> README.txt
           echo "www.OS-Q.com\n" >> README.txt
           git log --stat -1 >> README.txt
           zip -r P12.zip boards extend link.json link.py
+          ls -l P12.zip >> README.txt
+          sha256sum  P12.zip >> README.txt
           echo "FIRMWARE=$PWD" >> $GITHUB_ENV
           echo "::set-output name=status::success"
 
