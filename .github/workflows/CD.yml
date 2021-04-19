@@ -11,17 +11,14 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'OS-Q/P21'
+    if: github.repository == 'OS-Q/P12'
     strategy:
       fail-fast: true
       matrix:
         examples:
           - "arduino-blink"
-          - "cmsis-blink"
-          - "libopencm3-blink"
-          - "spl-blink"
-          - "stm32cube-hal-blink"
-          - "stm32cube-ll-blink"
+          - "arduino-own-src_dir"
+          - "MPU_Speed_Setting"
 
     steps:
     - uses: actions/checkout@v2
@@ -66,12 +63,12 @@ jobs:
       - name: Package Src
         id: package
         run: |
-          echo "Platform P21 for STM32 MCU" >> README.txt
+          echo "Platform P12 for LGT8F MCU" >> README.txt
           echo $(date +"%Y.%m.%d") >> README.txt
           echo ${GITHUB_REF/refs\/tags\//} >> README.txt
           echo -e "www.OS-Q.com\n" >> README.txt
           git log --stat -1 >> README.txt
-          zip -r P21.zip misc ldscripts boards extend link.json link.py
+          zip -r P12.zip misc ldscripts boards extend link.json link.py
           echo "FIRMWARE=$PWD" >> $GITHUB_ENV
           echo "::set-output name=status::success"
 
@@ -79,8 +76,8 @@ jobs:
         if: steps.package.outputs.status == 'success' &&  env.UPLOAD_BUILD
         uses: actions/upload-artifact@v2
         with:
-          name: P21
-          path: ${{ env.FIRMWARE }}/P21.zip
+          name: P12
+          path: ${{ env.FIRMWARE }}/P12.zip
 
       - name: Upload Release
         id: upload-release
@@ -91,7 +88,7 @@ jobs:
         with:
           tag_name: ${{ steps.tag.outputs.release_tag }}
           files: |
-            ${{ env.FIRMWARE }}/P21.zip
+            ${{ env.FIRMWARE }}/P12.zip
             ${{ env.FIRMWARE }}/README.txt
 
       - name: Setup OSS
@@ -104,7 +101,7 @@ jobs:
       - name: Upload To OSS
         id: OSS
         run: |
-          ossutil cp ${{ env.FIRMWARE }}/P21.zip ${{ secrets.OSS_BUCKET }} -rf
+          ossutil cp ${{ env.FIRMWARE }}/P12.zip ${{ secrets.OSS_BUCKET }} -rf
           echo "::set-output name=status::success"
 
 
@@ -129,18 +126,16 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -U https://github.com/OS-Q/S03/releases/latest/download/S03.zip
-          pio platform install https://github.com/OS-Q/P21/releases/latest/download/P21.zip
+          pio platform install https://github.com/OS-Q/P12/releases/latest/download/P12.zip
           echo "::set-output name=status::success"
 
       - name: ReBuild
         id: rebuild
         if: steps.getgh.outputs.status == 'success' && !cancelled()
         run: |
-          qio run -d examples/cmsis-blink
           qio run -d examples/arduino-blink
-          qio run -d examples/spl-blink
-          qio run -d examples/stm32cube-hal-blink
-          qio run -d examples/libopencm3-blink
+          qio run -d examples/MPU_Speed_Setting
+          qio run -d examples/arduino-own-src_dir
           echo "::set-output name=status::success"
 
       - name: Send Mail
@@ -151,7 +146,7 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: OS-Q P21 Released
+          subject: OS-Q P12 Released
           to: ${{secrets.MAIL_TO}}
           from: Qitas
           cc: ${{github.event.pusher.email}}
