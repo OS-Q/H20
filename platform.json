@@ -1,55 +1,37 @@
 {
     "name": "P12",
-    "title": "Platform P12 (LGT8F)",
-    "description": "Logic Green AVR MCU LGT8F series",
-    "homepage": "http://www.OS-Q.com/P12",
+    "title": "Logic Green boards",
+    "description": "Board Package for Logic Green",
+    "url": "https://github.com/darkautism/pio-lgt8fx",
+    "homepage": "https://github.com/darkautism/pio-lgt8fx",
     "license": "Apache-2.0",
-    "version": "1.0.5",
     "engines": {
         "platformio": "^5"
     },
-    "keywords": [
-        "OS-Q",
-        "dev-platform",
-        "avr",
-        "lgt8fx",
-        "MCU",
-        "arduino",
-        "8-bit"
-    ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/OS-Q/P12.git"
+        "url": "https://github.com/darkautism/pio-lgt8fx.git"
     },
+    "version": "1.0.1",
     "frameworks": {
         "arduino": {
-            "package": "A12",
+            "package": "framework-lgt8fx",
             "script": "builder/frameworks/arduino.py"
-        },
-        "native": {
-            "package": "E12A",
-            "script": "builder/frameworks/native.py"
         }
     },
     "packages": {
-        "A12": {
-            "type": "framework",
-            "optional": true,
-            "owner": "OS-Q",
-            "version": "https://github.com/OS-Q/A12.git"
-        },
-        "E12A": {
-            "type": "framework",
-            "optional": true,
-            "owner": "OS-Q",
-            "version": "https://github.com/OS-Q/E12A.git"
-        },
         "toolchain-atmelavr": {
             "type": "toolchain",
-            "version": "~1.70300.0"
+            "version": ">=1.70300.191015"
+        },
+        "framework-lgt8fx": {
+            "type": "framework",
+            "optional": true,
+            "version": ">=1.0.5"
         },
         "tool-avrdude": {
             "type": "uploader",
+            "optional": true,
             "version": "~1.60300.0"
         }
     }
