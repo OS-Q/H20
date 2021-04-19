@@ -19,7 +19,7 @@
     "arduino",
     "native"
   ],
-  "name": "LGT8F328P",
+  "name": "B12A",
   "upload": {
     "maximum_ram_size": 2048,
     "maximum_size": 29696,
@@ -27,6 +27,6 @@
     "require_upload_port": true,
     "speed": 57600
   },
-  "url": "http://www.lgtic.com/lgt8fx8p/",
-  "vendor": "LogicGreen"
+  "url": "http://www.OS-Q.com/B12A/",
+  "vendor": "OSQ"
 }
