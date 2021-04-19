@@ -38,8 +38,9 @@ jobs:
         qio platform install file://.
 
     - name: Build
+      working-directory: examples
       run: |
-        qio run -d examples/${{ matrix.examples }}
+        qio run -d ${{ matrix.examples }}
 
   release:
     needs:

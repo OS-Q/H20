@@ -16,14 +16,13 @@ jobs:
           command: |
             python -m pip install --upgrade pip
             pip install -U https://github.com/OS-Q/S03/releases/latest/download/S03.zip
-            qio platform install https://github.com/OS-Q/P21/releases/latest/download/P21.zip
+            qio platform install https://github.com/OS-Q/P12/releases/latest/download/P12.zip
       - run:
           name: "Build"
           command: |
             qio run -d examples/arduino-blink
-            qio run -d examples/cmsis-blink
-            qio run -d examples/spl-blink
-            qio run -d examples/stm32cube-hal-blink
+            qio run -d examples/arduino-own-src_dir
+            qio run -d examples/MPU_Speed_Setting
 
   latest:
     docker:
@@ -46,9 +45,8 @@ jobs:
           name: "Build"
           command: |
             qio run -d examples/arduino-blink
-            qio run -d examples/cmsis-blink
-            qio run -d examples/spl-blink
-            qio run -d examples/stm32cube-hal-blink
+            qio run -d examples/arduino-own-src_dir
+            qio run -d examples/MPU_Speed_Setting
 
 workflows:
     version: 2
