@@ -57,6 +57,11 @@ jobs:
           - "arduino-own-src_dir"
           - "Blink"
           - "MPU_Speed_Setting"
+          - "CLK"
+          - "DAC"
+          - "DS18B20"
+          - "IIC"
+          - "UART"
 
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
