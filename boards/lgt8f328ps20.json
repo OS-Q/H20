@@ -5,21 +5,15 @@
     "clock_source": "1",
     "core": "lgt8f",
     "mcu": "atmega328p",
-    "variant": "lgt8fx8p"
+    "variant": "lgt8fx8ps20"
   },
   "bootloader": {
-    "efuse": "0xFD",
-    "file": "lgt8fx8p/optiboot_lgt8f328p.hex",
-    "hfuse": "0xFF",
-    "lock_bits": "0x3F",
-    "lfuse": "0xFF",
-    "unlock_bits": "0x3F"
+    "file": "lgt8fx8ps20/optiboot_lgt8f328ps20.hex"
   },
   "frameworks": [
-    "arduino",
-    "native"
+    "arduino"
   ],
-  "name": "B12A",
+  "name": "LGT8F328P-SSOP20",
   "upload": {
     "maximum_ram_size": 2048,
     "maximum_size": 29696,
@@ -27,6 +21,6 @@
     "require_upload_port": true,
     "speed": 57600
   },
-  "url": "http://www.OS-Q.com/B12A/",
-  "vendor": "OSQ"
+  "url": "http://www.lgtic.com/lgt8fx8p/",
+  "vendor": "LogicGreen"
 }
