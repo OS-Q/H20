@@ -16,7 +16,7 @@
     "frameworks": {
         "arduino": {
             "package": "framework-lgt8fx",
-            "script": "builder/frameworks/arduino.py"
+            "script": "extend/frameworks/arduino.py"
         }
     },
     "packages": {
