@@ -59,9 +59,14 @@ jobs:
           - "MPU_Speed_Setting"
           - "CLK"
           - "DAC"
-          - "DS18B20"
+          - "battery"
           - "IIC"
           - "UART"
+          - "clock"
+          - "current"
+          - "dht11"
+          - "sleep"
+          - "voltage"
 
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
