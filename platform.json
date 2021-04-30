@@ -1,6 +1,6 @@
 {
     "name": "P17",
-    "title": "Logic Green boards",
+    "title": "AVR Core LGT8F MCU",
     "description": "Board Package for Logic Green",
     "url": "https://github.com/darkautism/pio-lgt8fx",
     "homepage": "https://github.com/darkautism/pio-lgt8fx",
