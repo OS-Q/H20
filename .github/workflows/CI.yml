@@ -67,7 +67,7 @@ jobs:
           - "dht11"
           - "sleep"
           - "voltage"
-
+        package: ["pio","qio"]
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     runs-on: ${{ matrix.os }}
