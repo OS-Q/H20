@@ -57,7 +57,17 @@ jobs:
           - "arduino-own-src_dir"
           - "Blink"
           - "MPU_Speed_Setting"
-        package: ["pio","qio"]
+          - "CLK"
+          - "DAC"
+          - "battery"
+          - "IIC"
+          - "UART"
+          - "clock"
+          - "current"
+          - "dht11"
+          - "sleep"
+          - "voltage"
+
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     runs-on: ${{ matrix.os }}
