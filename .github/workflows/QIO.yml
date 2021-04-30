@@ -53,6 +53,8 @@ jobs:
       fail-fast: false
       matrix:
         example:
+          - "arduino-blink"
+          - "arduino-own-src_dir"
           - "Blink"
           - "MPU_Speed_Setting"
 
