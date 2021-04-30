@@ -14,15 +14,61 @@ jobs:
             git submodule update --init --recursive
             python -m pip install --upgrade pip
             pip install -U https://github.com/OS-Q/M03/releases/latest/download/qio.zip
-            pio platform install https://github.com/OS-Q/P17/archive/qio.zip
+            pio platform install file://.
       - run:
           name: "Build"
           command: |
+            qio run -d examples/arduino-blink
+            qio run -d examples/arduino-own-src_dir
             qio run -d examples/Blink
             qio run -d examples/MPU_Speed_Setting
+            qio run -d examples/CLK
+            qio run -d examples/DAC
+            qio run -d examples/battery
+            qio run -d examples/IIC
+            qio run -d examples/UART
+            qio run -d examples/clock
+            qio run -d examples/current
+            qio run -d examples/dht11
+            qio run -d examples/voltage
+            qio run -d examples/sleep
 
+
+  PIO:
+    docker:
+      - image: python:3
+    steps:
+      - checkout
+      - run:
+          name: "Install"
+          command: |
+            apt update
+            apt install -y git
+            git submodule update --init --recursive
+            python -m pip install --upgrade pip
+            pip install -U https://github.com/platformio/platformio/archive/develop.zip
+            pio platform install file://.
+      - run:
+          name: "Build"
+          command: |
+            pio run -d examples/arduino-blink
+            pio run -d examples/arduino-own-src_dir
+            pio run -d examples/Blink
+            pio run -d examples/MPU_Speed_Setting
+            pio run -d examples/CLK
+            pio run -d examples/DAC
+            pio run -d examples/battery
+            pio run -d examples/IIC
+            pio run -d examples/UART
+            pio run -d examples/clock
+            pio run -d examples/current
+            pio run -d examples/dht11
+            pio run -d examples/voltage
+            pio run -d examples/sleep
 workflows:
     version: 2
     run_ci:
         jobs:
           - QIO
+          - PIO
+

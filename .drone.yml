@@ -1,14 +1,49 @@
 kind: pipeline
-name: default
+name: OSQ
 
 steps:
-- name: OSQ
+- name: QIO
   image: python:3
   commands:
   - apt update
   - apt install -y git
   - git submodule update --init --recursive
   - pip install -U https://github.com/OS-Q/M03/releases/latest/download/qio.zip
-  - qio platform install https://github.com/OS-Q/P17/archive/qio.zip
-  - qio run -d examples/Blink
-  - qio run -d examples/MPU_Speed_Setting
+  - qio platform install file://.
+  - pio run -d examples/arduino-blink
+  - pio run -d examples/arduino-own-src_dir
+  - pio run -d examples/Blink
+  - pio run -d examples/MPU_Speed_Setting
+  - pio run -d examples/CLK
+  - pio run -d examples/DAC
+  - pio run -d examples/battery
+  - pio run -d examples/IIC
+  - pio run -d examples/UART
+  - pio run -d examples/clock
+  - pio run -d examples/current
+  - pio run -d examples/dht11
+  - pio run -d examples/voltage
+  - pio run -d examples/sleep
+
+- name: PIO
+  image: python:3
+  commands:
+  - apt update
+  - apt install -y git
+  - git submodule update --init --recursive
+  - pip install -U https://github.com/platformio/platformio/archive/develop.zip
+  - pio platform install file://.
+  - pio run -d examples/arduino-blink
+  - pio run -d examples/arduino-own-src_dir
+  - pio run -d examples/Blink
+  - pio run -d examples/MPU_Speed_Setting
+  - pio run -d examples/CLK
+  - pio run -d examples/DAC
+  - pio run -d examples/battery
+  - pio run -d examples/IIC
+  - pio run -d examples/UART
+  - pio run -d examples/clock
+  - pio run -d examples/current
+  - pio run -d examples/dht11
+  - pio run -d examples/voltage
+  - pio run -d examples/sleep
