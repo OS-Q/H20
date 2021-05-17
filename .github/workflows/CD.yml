@@ -7,9 +7,9 @@ on:
 
 env:
   MONT: "M03"
-  PLAT: "P17"
+  PLAT: "P117"
   TEMP: "F17"
-  TOPIC: "P17(LGT8F) "
+  TOPIC: "P117(LGT8F) "
   LASTV: "v0.0.1"
 
 jobs:

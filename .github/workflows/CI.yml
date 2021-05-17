@@ -94,7 +94,6 @@ jobs:
           pio platform install file://.
 
       - name: Build examples
-        id: build
         if: success()
         working-directory: examples
         run: |
