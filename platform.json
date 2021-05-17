@@ -2,9 +2,7 @@
     "name": "P117",
     "title": "AVR Core LGT8F MCU",
     "description": "Board Package for Logic Green",
-    "url": "https://github.com/darkautism/pio-lgt8fx",
     "homepage": "https://github.com/darkautism/pio-lgt8fx",
-    "license": "Apache-2.0",
     "engines": {
         "platformio": "^5"
     },
@@ -22,7 +20,9 @@
     "packages": {
         "toolchain-atmelavr": {
             "type": "toolchain",
-            "version": ">=1.70300.191015"
+            "owner": "platformio",
+            "version": "~2.70300.0",
+            "optionalVersions": ["~1.70300.0"]
         },
         "framework-lgt8fx": {
             "type": "framework",
