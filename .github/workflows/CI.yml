@@ -7,7 +7,6 @@ on:
     paths:
       - 'boards/**'
       - 'builder/**'
-      - 'make/**'
       - 'examples/**'
       - '**.json'
       - '**.py'
