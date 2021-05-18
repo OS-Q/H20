@@ -10,6 +10,7 @@ on:
       - 'examples/**'
       - 'platform.json'
       - 'platform.py'
+      - '**.yml'
 
 jobs:
   CodeCheck:
