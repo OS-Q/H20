@@ -13,7 +13,7 @@
     "version": "1.0.1",
     "frameworks": {
         "arduino": {
-            "package": "E117",
+            "package": "A117",
             "script": "extend/frameworks/arduino.py"
         }
     },
@@ -24,10 +24,10 @@
             "version": "~2.70300.0",
             "optionalVersions": ["~1.70300.0"]
         },
-        "E117": {
+        "A117": {
             "type": "framework",
             "optional": true,
-            "version": "https://github.com/OS-Q/E117.git"
+            "version": "https://github.com/OS-Q/A117.git"
         },
         "tool-avrdude": {
             "type": "uploader",

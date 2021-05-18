@@ -7,7 +7,7 @@ platform = env.PioPlatform()
 board = env.BoardConfig()
 build_core = board.get("build.core", "lgt8f")
 
-FRAMEWORK_DIR = platform.get_package_dir("E117")
+FRAMEWORK_DIR = platform.get_package_dir("A117")
 
 assert isdir(FRAMEWORK_DIR)
 

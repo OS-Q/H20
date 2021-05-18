@@ -13,6 +13,10 @@
     "version": "1.0.1",
     "frameworks": {
         "arduino": {
+            "package": "A117",
+            "script": "builder/frameworks/arduino.py"
+        },
+        "extend": {
             "package": "E117",
             "script": "builder/frameworks/arduino.py"
         }
@@ -23,6 +27,11 @@
             "owner": "platformio",
             "version": "~2.70300.0",
             "optionalVersions": ["~1.70300.0"]
+        },
+        "A117": {
+            "type": "framework",
+            "optional": true,
+            "version": "https://github.com/OS-Q/A117.git"
         },
         "E117": {
             "type": "framework",
