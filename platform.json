@@ -1,6 +1,6 @@
 {
     "name": "P117",
-    "title": "AVR Core LGT8F MCU",
+    "title": "LGT8F AVR MCU",
     "description": "Board Package for Logic Green",
     "homepage": "https://github.com/darkautism/pio-lgt8fx",
     "engines": {
@@ -32,6 +32,7 @@
         "tool-avrdude": {
             "type": "uploader",
             "optional": true,
+            "owner": "platformio",
             "version": "~1.60300.0"
         }
     }
