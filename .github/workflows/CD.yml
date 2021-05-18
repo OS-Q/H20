@@ -8,7 +8,7 @@ on:
 env:
   MONT: "M03"
   PLAT: "P117"
-  TEMP: "F17"
+  TEMP: "W117"
   TOPIC: "P117(LGT8F) "
   LASTV: "v0.0.1"
 

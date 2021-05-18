@@ -13,7 +13,7 @@
     "version": "1.0.1",
     "frameworks": {
         "arduino": {
-            "package": "framework-lgt8fx",
+            "package": "E117",
             "script": "builder/frameworks/arduino.py"
         }
     },
@@ -24,10 +24,10 @@
             "version": "~2.70300.0",
             "optionalVersions": ["~1.70300.0"]
         },
-        "framework-lgt8fx": {
+        "E117": {
             "type": "framework",
             "optional": true,
-            "version": ">=1.0.5"
+            "version": "https://github.com/OS-Q/E117.git"
         },
         "tool-avrdude": {
             "type": "uploader",

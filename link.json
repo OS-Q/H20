@@ -1,6 +1,6 @@
 {
     "name": "P117",
-    "title": "AVR Core LGT8F MCU",
+    "title": "LGT8F AVR MCU",
     "description": "Board Package for Logic Green",
     "homepage": "https://github.com/darkautism/pio-lgt8fx",
     "engines": {
@@ -8,13 +8,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/darkautism/pio-lgt8fx.git"
+        "url": "https://github.com/OS-Q/P117.git"
     },
     "version": "1.0.1",
     "frameworks": {
         "arduino": {
-            "package": "framework-lgt8fx",
-            "script": "builder/frameworks/arduino.py"
+            "package": "E117",
+            "script": "extend/frameworks/arduino.py"
         }
     },
     "packages": {
@@ -24,10 +24,10 @@
             "version": "~2.70300.0",
             "optionalVersions": ["~1.70300.0"]
         },
-        "framework-lgt8fx": {
+        "E117": {
             "type": "framework",
             "optional": true,
-            "version": ">=1.0.5"
+            "version": "https://github.com/OS-Q/E117.git"
         },
         "tool-avrdude": {
             "type": "uploader",
